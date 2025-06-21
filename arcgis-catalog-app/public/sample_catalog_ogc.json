@@ -1,0 +1,36 @@
+{
+  "name": "OGC Services Catalog",
+  "description": "A collection of OGC standard mapping services.",
+  "version": "1.0",
+  "datasets": [
+    {
+      "id": "ogc_wms_example",
+      "name": "IEM WMS Service (Example)",
+      "description": "Iowa Environmental Mesonet WMS service for NEXRAD base reflectivity.",
+      "type": "WMSLayer",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
+      "customParameters": {
+        "activeLayers": ["nexrad-n0r-900913"]
+      }
+    },
+    {
+      "id": "ogc_wmts_example",
+      "name": "National Map WMTS Hillshade (USGS)",
+      "description": "USGS National Map Hillshade Relief (WMTS).",
+      "type": "WMTSLayer",
+      "url": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/WMTS/1.0.0/WMTSCapabilities.xml",
+      "customParameters": {
+        "activeLayer": {
+          "id": "USGSShadedReliefOnly"
+        }
+      }
+    },
+    {
+      "id": "ogc_kml_earthquakes",
+      "name": "USGS Real-time Earthquakes (KML)",
+      "description": "KML feed of recent earthquakes from USGS.",
+      "type": "KMLLayer",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day_summary.kml"
+    }
+  ]
+}

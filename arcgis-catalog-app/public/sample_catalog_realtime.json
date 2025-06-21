@@ -1,0 +1,40 @@
+{
+  "name": "Real-time Data Catalog",
+  "description": "A collection of real-time data services (e.g., Stream Services).",
+  "version": "1.0",
+  "datasets": [
+    {
+      "id": "realtime_streamlayer_vehicles",
+      "name": "Simulated Vehicle Positions (StreamLayer)",
+      "description": "A stream service showing simulated real-time vehicle positions. (Availability may vary)",
+      "type": "StreamLayer",
+      "url": "https://sampleserver7.arcgisonline.com/server/rest/services/FNAL/Simulated автобус Stream Service/StreamServer",
+      "customParameters": {
+        "popupTemplate": {
+          "title": "Vehicle ID: {VEHICLEID}",
+          "content": "Speed: {SPEED} km/h <br> Heading: {HEADING} degrees <br> Last seen: {DATETIME}"
+        },
+        "renderer": {
+          "type": "simple",
+          "symbol": {
+            "type": "simple-marker",
+            "style": "triangle",
+            "color": "cyan",
+            "size": "12px",
+            "outline": {
+              "color": [0, 0, 0, 0.8],
+              "width": 1
+            }
+          },
+          "visualVariables": [
+            {
+              "type": "rotation",
+              "field": "HEADING",
+              "rotationType": "geographic"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
