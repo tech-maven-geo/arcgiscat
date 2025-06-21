@@ -1,0 +1,42 @@
+{
+  "name": "Esri Services Catalog",
+  "description": "A collection of various Esri ArcGIS Server services.",
+  "version": "1.0",
+  "datasets": [
+    {
+      "id": "esri_mapserver_dynamic",
+      "name": "USA Major Cities Map (Dynamic)",
+      "description": "A dynamic map service showing major cities in the USA.",
+      "type": "MapImageLayer",
+      "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer"
+    },
+    {
+      "id": "esri_featureserver_points",
+      "name": "Wildfire Feature Layer (Points)",
+      "description": "Feature service representing wildfire locations and perimeters.",
+      "type": "FeatureLayer",
+      "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Wildfire/FeatureServer/0"
+    },
+    {
+      "id": "esri_imageserver_landsat",
+      "name": "Landsat GLS Shaded Relief",
+      "description": "Imagery service providing shaded relief from Landsat.",
+      "type": "ImageryLayer",
+      "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/LandsatGLS/ShadedRelief/ImageServer"
+    },
+    {
+      "id": "esri_tilelayer_street",
+      "name": "World Street Map (Tiled)",
+      "description": "ArcGIS Online World Street Map (tiled map service).",
+      "type": "TileLayer",
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+    },
+    {
+      "id": "esri_vectortilelayer_nav",
+      "name": "Navigation Vector Tiles (Dark)",
+      "description": "Vector tile layer for navigation (dark theme).",
+      "type": "VectorTileLayer",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/5ad394823fd3427693042783e8089604/resources/styles/root.json"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Static Files and 3D Scene Layers Catalog",
+  "description": "A collection of static data files (GeoJSON, CSV) and 3D Scene Layers.",
+  "version": "1.0",
+  "datasets": [
+    {
+      "id": "static_geojson_states",
+      "name": "US States (GeoJSON)",
+      "description": "GeoJSON file representing US state boundaries.",
+      "type": "GeoJSONLayer",
+      "url": "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json",
+      "customParameters": {
+        "renderer": {
+          "type": "simple",
+          "symbol": {
+            "type": "simple-fill",
+            "color": [ 51, 153, 204, 0.5 ],
+            "outline": {
+              "color": [0, 0, 0, 0.8],
+              "width": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "static_csv_earthquakes",
+      "name": "Recent Earthquakes (CSV)",
+      "description": "CSV file of recent earthquakes, rendered client-side.",
+      "type": "CSVLayer",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv",
+      "customParameters": {
+        "latitudeField": "latitude",
+        "longitudeField": "longitude",
+        "renderer": {
+          "type": "simple",
+          "symbol": {
+            "type": "simple-marker",
+            "color": [255, 0, 0, 0.7],
+            "size": "8px",
+            "outline": {
+              "color": [255, 255, 255, 0.5],
+              "width": 0.5
+            }
+          }
+        },
+        "popupTemplate": {
+          "title": "Earthquake: {mag}",
+          "content": "Magnitude {mag} earthquake occurred at {latitude}, {longitude} on {time}. More info: {url}"
+        }
+      }
+    },
+    {
+      "id": "threed_scenelayer_buildings",
+      "name": "New York Buildings (SceneLayer)",
+      "description": "3D buildings in New York City.",
+      "type": "SceneLayer",
+      "url": "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/Buildings_NewYork_17/SceneServer"
+    },
+    {
+      "id": "threed_scenelayer_integratedmesh",
+      "name": "Vricon Integrated Mesh (SceneLayer)",
+      "description": "Sample Integrated Mesh layer from Vricon.",
+      "type": "IntegratedMeshLayer",
+      "url": "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/VRICON_Yosemite_Sample_Integrated_Mesh/SceneServer"
+    }
+  ]
+}
